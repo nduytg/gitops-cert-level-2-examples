@@ -25,10 +25,12 @@ spec:
   ignoreDifferences:
     - group: apps
       kind: Deployment
+      name: simple-deployment
+      namespace: example02
       jsonPointers:
-      - /metadata/annotations/creation
+      - /metadata
 
-    - group: apps
+    - group: ""
       kind: Secret
       jsonPointers:
       - /data
